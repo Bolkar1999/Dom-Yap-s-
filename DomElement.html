@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <ul id="liste">
+            <li class="list" id="bir">List1</li>
+            <li class="list">List2</li>
+            <li class="list">List3</li>
+            <li class="list">List4</li>
+        </ul>
+    </div>
+
+    <script>
+        let çıktı;
+        ul = document.getElementById("liste");
+
+        var yapı = ul.children.length;
+        
+        let yenielement = `
+        
+        <ul id="liste">
+            <li class="list" id="beş">List ${yapı + 1}</li>
+            <li class="list" id="altı">List ${yapı + 2}</li>  
+            <li class="list" id="yedi">List ${yapı + 3}</li>
+        </ul>
+       
+        `
+        
+        ul.insertAdjacentHTML("afterend" , yenielement);
+        
+        console.log(yenielement);
+
+
+
+
+        // document.querySelector("#bir").parentElement.remove();
+        
+        document.querySelector("#liste").children[0].setAttribute("id","bir");
+
+        document.querySelector("#liste").children[1].setAttribute("id","iki");
+
+        document.querySelector("#liste").children[2].setAttribute("class","li");
+
+        çıktı = document.querySelector("#liste").children[1].classList[0];
+    
+         çıktı = document.querySelector("#liste").children[2].setAttribute("class");
+
+        console.log(çıktı);
+
+
+
+    </script>
+
+</body>
+</html>

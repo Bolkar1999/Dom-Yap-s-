@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Dom yapısı üzerinde Event Listener</h1>
+    <button id="Tıklama" class="Tıklama" type="submit">Tıklama tuşu</button>
+    <br>
+    <br>
+    <button id="üzerinegelme" class="üzerinegelme" type="submit">üzerinegelme tuşu</button>
+
+    <script>
+
+        document.querySelector("#Tıklama").addEventListener("click", tıklamafonksiyonu);
+
+        function tıklamafonksiyonu(e){
+            var çıktı = e.target.id;
+            console.log(çıktı);
+        }
+
+        document.querySelector(".üzerinegelme").addEventListener("mouseover", function üzerinegelme(v){
+           
+           v.preventDefault();
+           console.log("görev başarılı!")} );
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+<!-- .addEventListener : Klavye yada mouse üzerindeki işlemleri değerlendirir ve işlemler üzerine yeni yapılar inşa eder...-->
